@@ -1,0 +1,115 @@
+/* // colors */
+:root {
+    --LimeGreen: hsl(163, 72%, 41%);
+    --BrightRed: hsl(356, 69%, 56%);
+    --Facebook: hsl(208, 92%, 53%);
+    --Twitter: hsl(203, 89%, 53%);
+    --Instagram: linear-gradient(to right, hsl(37, 97%, 70%),hsl(329, 70%, 58%));
+    --YouTube: hsl(348, 97%, 39%);
+    
+    /* // Dark Theme */
+    --ToggleDark: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    
+    /* // Light Theme */
+    --ToggleLight: rgb(174, 179, 203);
+    
+    /* // Dark Theme */
+    --VeryDarkBlueBG: hsl(230, 17%, 14%);
+    --VeryDarkBlueTopBGPattern: hsl(232, 19%, 15%);
+    --DarkDesaturatedBlueCardBG: hsl(228, 28%, 20%);
+    --DesaturatedBlueText: hsl(228, 34%, 66%);
+    --WhiteText: hsl(0, 0%, 100%);
+    
+    /* // Light Theme */
+    --WhiteBG: hsl(0, 0%, 100%);
+    --VeryPaleBlueTopBGPattern: hsl(225, 100%, 98%);
+    --LightGrayishBlueCardBG: hsl(227, 47%, 96%);
+    --DarkGrayishBlueText: hsl(228, 12%, 44%);
+    --VeryDarkBlueText: hsl(230, 17%, 14%);
+    
+    --FontSize: 14px;
+    --InterFont: "Inter", sans-serif;
+    }
+
+.platform {
+    background-color: var(--DarkDesaturatedBlueCardBG);
+    width: calc((100% / 4) - 20px);
+    text-align: center;
+    padding: 30px 0 20px 0;
+    border-radius: 6px;
+    border-top: 5px solid;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.platform:hover {
+    background-color: rgb(46, 53, 80);
+}
+.platform .name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.platform .name img {
+    margin-right: 10px;
+}
+.platform .name p {
+    color: var(--DesaturatedBlueText);
+    font-size: var(--FontSize);
+    font-weight: 500;
+}
+.platform > span {
+    font-size: 60px;
+    font-weight: 600;
+    color: var(--WhiteText);
+}
+.platform > p.type {
+    color: var(--DesaturatedBlueText);
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 12px;
+}
+.platform .status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 0 0;
+    font-size: var(--FontSize);
+    font-weight: 600;
+}
+.platform .status img {
+    margin-right: 6px;
+}
+
+@media (max-width: 1089px) {
+    .platform > span {
+        font-size: 50px;
+    }
+    .platform > p.type {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 830px) {
+    .platform > span {
+        font-size: 40px;
+    }
+    .platform > p.type {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+    .platform .status p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 800px) {
+    .platform {
+        width: calc((100% / 2) - 20px);
+    }
+}
+@media (max-width: 600px) {
+    .platform {
+        width: 100%;
+    }
+}
